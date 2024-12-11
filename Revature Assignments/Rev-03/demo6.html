@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Event Listeners</title>
+</head>
+
+<body>
+    <h1 id="myh1">This is a header</h1>
+    <button id="btn1">Click Me</button>
+    <script>
+        document.getElementById("btn1").addEventListener("click", onClickHandler, true);
+
+        function onClickHandler() {
+            alert("Hey this works !!!").document.getElementById("myh1").innerHTML = "This is nnow changed!";
+        }
+    </script>
+</body>
+
+</html>

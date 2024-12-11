@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>To do List</title>
+    <script>
+        function addElement() {
+            let newElement = document.createElement("li");
+            newElement.innerHTML = document.getElementById("text1").value;
+            let list = document.getElementById("myUL");
+            list.append(newElement);
+        }
+
+        function deleteElement() {
+            let item = document.getElementById("text1");
+            let currentItem = document.getElementById("myUL").getElementsByTagName("li");
+            for (let i = 0; i < currentItem.length; i++) {
+                if (currentItem[i].innerText === item.value) {
+                    currentItem[i].remove();
+                    break;
+                }
+                item.value == "";
+            }
+        }
+
+        function completeElement() {
+            let item = document.getElementById("text1");
+            let list = document.getElementById("myUL").getElementsByTagName("li");
+            for (i = 0; i < list.length; i++) {
+                if (list[i].innerText === item.value) {
+                    list[i].style.textDecoration = "line-through";
+                    break;
+                }
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>To Do List</h1>
+    <input type="text" id="text1" />
+    <button onclick="addElement()">Add to List</button>
+    <button onclick="deleteElement()">Delete from List</button>
+    <button onclick="completeElement()">Mark as Complete</button>
+    <hr />
+    <ul id="myUL">
+        <li>Pay the bills</li>
+    </ul>
+</body>
+
+</html>
