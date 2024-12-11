@@ -1,0 +1,28 @@
+span {
+    display: block;
+}
+
+img {
+    width: 75px;
+    height: 75px;
+}
+
+li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid white;
+    justify-items: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    background-color: lightslategray;
+}
+
+hr {
+    accent-color: black;
+}
